@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Neumorphism Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container" align="center">
+        <h1>Inscreva-se</h1>
+        <div id="user">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Nome de Usuário">
+        </div>
+
+        <div id="email">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Seu Email">
+        </div>
+
+        <div id="lock">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Criar senha">
+        </div>
+        <button id="btn">inscrever</button>
+        <h4>Ou Inscreva-se com outra plataforma</h4>
+        <div id="social_icon">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-google"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <div id="foot">
+            <a>Já possui uma conta?</a>
+            <a href="#" id="sign">Increva-se</a>
+        </div>
+        <div id="mode">
+            <button id="lt" onclick="light()">Brilho</button>
+            <button id="drk" onclick="dark()">Escuro</button>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var color = document.documentElement.style;
+
+    function light(){
+        color.setProperty('--bg1', '#c2c2c4');
+        color.setProperty('--bg2', '#e2e2e4');
+        color.setProperty('--Boxshadow', '#a1a1a3');
+        color.setProperty('--Shadow1', '#848486');
+        color.setProperty('--Shadow2', '#fcfcfe');
+        color.setProperty('--SforIcon1', '#ececee');
+        color.setProperty('--SforIcon2', '#8a8b8e');
+
+        document.getElementById('lt').style.display="none";
+        document.getElementById('drk').style.display="block";
+    }
+
+    function dark(){
+        color.setProperty('--bg1', '#040406');
+        color.setProperty('--bg2', '#323234');
+        color.setProperty('--Boxshadow', '#010203');
+        color.setProperty('--Shadow1', '#040406');
+        color.setProperty('--Shadow2', '#444446');
+        color.setProperty('--SforIcon1', '#2a2b2c');
+        color.setProperty('--SforIcon2', '#020305');
+
+        document.getElementById('lt').style.display="block";
+        document.getElementById('drk').style.display="none";
+    }
+</script>
+</html>
